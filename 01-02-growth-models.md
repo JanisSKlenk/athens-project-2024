@@ -25,11 +25,31 @@ The Non-Homogeneous Poisson Process (NHPP) model is a statistical model commonly
 
 ### Goel-Okumoto (GO)
 
-### Musa-Okumoto (MO)
+This model is a mathematical model used in software reliability engineering to predict the number of software faults and the faults detection rate over time. The model is based on the assumption that the fault detection rate decreases exponentially as the software testing process progresses, which is in accordance with the reality that finding faults becomes progressively harder as the most detectable faults are identified and corrected. 
+The model can be described by the formula: 
+M(t)=a(1−e^−bt)
+- M(t) = expected cumulative number of faults detected by time
+- a = the total number of faults in the software that could be detected by the testing process, essentially an estimate of the software's inherent faultiness.
+- b = a parameter that reflects the fault detection rate per fault remaining at time 
+- t = indicator how quickly faults are expected to be found.
+- e = the base of the natural logarithm
 
-### Littlewood-Verrall (LV)
+The model can help with planning and managing the testing processs, forecasting future fault discovery and assessing when a software has reached sufficient reliability for release.
 
-### Others
+Advantages:
+- simplicity
+- predictive power in early stages as it can help predict the number of defects
+- suitable for planning and management as it estimates the number of faults over time and can thus aid in planning and managing the testing process
+- useful for trend analysis as it offers a quantitative method to assess the effectiveness of debugging efforts over time and shows how quickly faults are detected and fixed
+
+Disadvantages:
+- assumption of exponential decay may not be in accordance with reality
+- limited applicability, as the model is less well-suited for agile or iterative developments where the software changes rapidly
+- parameters are estimates which might not be correct especially in early stages
+- amount of efforts and resources allocated to testing process are not taken into account
+  
+
+
 
 Some models that we didn't cover in the project:
 
